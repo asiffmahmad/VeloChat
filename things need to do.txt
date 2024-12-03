@@ -1,0 +1,39 @@
+Chat Application
+
+use existing server for login service 
+features
+what user typing that need to show to opposite user
+files can able to share 
+all chats and files are encryped with AES algorithem 
+after 2 days all charts are deeted for user but not in data base 
+only img mp4 are alloed to share 
+
+
+creatre a project for this in git and open for public 
+
+front end 
+angular 
+
+back end 
+java 17
+jpa
+sagger need use
+use some 5 third part api like to fetch quote , weather condition , time ...etc
+need add external logger 
+need to add a schduler to delete the data based in time interval
+create a api document and postman document 
+
+db my sql
+
+
+
+
+
+
+Description: Develop a chat application that supports multiple users and showcases Java 8 features.
+Features:
+Use CompletableFutures for asynchronous message sending and receiving.
+Lambda expressions for event handling.
+Stream API for processing message logs.
+Default methods for extending chat interfaces.
+

@@ -1,0 +1,177 @@
+Project Structure  VeloChat
+
+Frontend: Angular
+Components:
+
+LoginComponent
+ChatComponent
+MessageComponent
+FileUploadComponent
+UserTypingIndicatorComponent
+Services:
+
+AuthService (login and authentication)
+ChatService (sending and receiving messages)
+FileService (file upload and download)
+UserService (fetching user information and status)
+Models:
+
+User
+Message
+File
+Modules:
+
+AppModule
+AuthModule
+ChatModule
+Backend: Java 17 (Spring Boot)
+Controllers:
+
+AuthController
+ChatController
+FileController
+Services:
+
+AuthService
+ChatService
+FileService
+EncryptionService
+Repositories:
+
+UserRepository
+MessageRepository
+FileRepository
+Entities:
+
+User
+Message
+File
+Configuration:
+
+SecurityConfig (Spring Security configuration)
+WebConfig (CORS, etc.)
+Utilities:
+
+AESUtil (for AES encryption and decryption)
+Scheduled Tasks:
+
+ChatCleanupTask (to delete chats older than 2 days for users)
+Database: MySQL
+Tables:
+Users (id, username, password, etc.)
+Messages (id, sender_id, receiver_id, message_content, timestamp, etc.)
+Files (id, message_id, file_path, file_type, etc.)
+Project Implementation Plan
+Step 1: Setting Up the Project Repositories
+Create a GitHub repository for the project.
+Set up Angular and Spring Boot projects and push initial setups to the repository.
+Step 2: Implementing the Frontend (Angular)
+LoginComponent:
+
+Form for user login.
+Authentication with the backend.
+Redirect to ChatComponent upon successful login.
+ChatComponent:
+
+Display list of messages.
+Form to send new messages.
+Display user typing indicator.
+MessageComponent:
+
+Display individual messages with sender details.
+FileUploadComponent:
+
+Form to upload files.
+Restrict uploads to images and MP4 videos.
+UserTypingIndicatorComponent:
+
+Display when a user is typing.
+Services:
+
+Implement methods for API calls (AuthService, ChatService, FileService, UserService).
+Step 3: Implementing the Backend (Spring Boot)
+Controllers:
+
+AuthController: Handle login requests.
+ChatController: Handle sending and receiving messages.
+FileController: Handle file uploads and downloads.
+Services:
+
+AuthService: Authenticate users.
+ChatService: Manage chat messages, including saving to the database and fetching messages.
+FileService: Handle file storage and retrieval.
+EncryptionService: Encrypt and decrypt messages and files using AES.
+Repositories:
+
+UserRepository: CRUD operations for users.
+MessageRepository: CRUD operations for messages.
+FileRepository: CRUD operations for files.
+Entities:
+
+User: User entity with fields like id, username, password.
+Message: Message entity with fields like id, sender, receiver, content, timestamp.
+File: File entity with fields like id, message_id, file_path, file_type.
+Configuration:
+
+SecurityConfig: Configure Spring Security for authentication.
+WebConfig: Configure CORS and other web settings.
+Utilities:
+
+AESUtil: Implement AES encryption and decryption logic.
+Scheduled Tasks:
+
+ChatCleanupTask: Schedule a task to delete user-visible messages older than 2 days.
+Step 4: Setting Up the Database (MySQL)
+Create a MySQL database and tables according to the schema.
+Configure the Spring Boot application to connect to the MySQL database.
+Step 5: Integrating Frontend and Backend
+Test login functionality.
+Implement chat messaging.
+Implement file upload and download.
+Test AES encryption for messages and files.
+Implement user typing indicator.
+Step 6: Deployment and Documentation
+Deploy the application (e.g., on Heroku for backend, Netlify for frontend).
+Create comprehensive documentation for the project.
+Ensure the GitHub repository is public and includes setup instructions.
+GitHub Repository Structure
+css
+Copy code
+chat-application/
+├── backend/
+│   ├── src/main/java/com/example/chatapp/
+│   │   ├── controller/
+│   │   ├── service/
+│   │   ├── repository/
+│   │   ├── model/
+│   │   ├── config/
+│   │   ├── util/
+│   │   └── ChatApplication.java
+│   ├── src/main/resources/
+│   │   ├── application.properties
+│   │   └── schema.sql
+│   └── pom.xml
+├── frontend/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   ├── models/
+│   │   │   └── app.module.ts
+│   │   ├── assets/
+│   │   └── environments/
+│   ├── angular.json
+│   └── package.json
+└── README.md
+Final Note
+This project structure and plan should help you create a robust and feature-complete chat application using Java 17, Angular, and MySQL. Make sure to follow best practices for security, performance, and code organization throughout the development process.
+
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check importan
